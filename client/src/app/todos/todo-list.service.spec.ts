@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UserListService } from './user-list.service';
+import { TodoListService } from './todo-list.service';
 
 describe('UserListService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: UserListService = TestBed.get(UserListService);
+    const service: TodoListService = TestBed.get(TodoListService);
     expect(service).toBeTruthy();
   });
 });

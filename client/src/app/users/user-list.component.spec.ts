@@ -50,7 +50,7 @@ describe('User list', () => {
     TestBed.configureTestingModule({
       imports: [CustomModule],
       declarations: [UserListComponent],
-      // providers:    [ UserListService ]  // NO! Don't provide the real service!
+      // providers:    [ TodoListService ]  // NO! Don't provide the real service!
       // Provide a test-double instead
       providers: [{provide: UserListService, useValue: userListServiceStub}]
     });
@@ -102,7 +102,7 @@ describe('Misbehaving User List', () => {
     });
   }));
 
-  it('generates an error if we don\'t set up a UserListService', () => {
+  it('generates an error if we don\'t set up a TodoListService', () => {
     // Since the observer throws an error, we don't expect users to be defined.
     expect(userList.users).toBeUndefined();
   });
@@ -172,7 +172,7 @@ describe('Adding a user', () => {
     });
   }));
 
- /* it('calls UserListService.addUser', () => {
+ /* it('calls TodoListService.addUser', () => {
     expect(calledUser).toBeNull();
     userList.openDialog();
     expect(calledUser).toEqual(newUser);

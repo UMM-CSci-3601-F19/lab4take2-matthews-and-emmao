@@ -25,7 +25,7 @@ export class UserListComponent implements OnInit {
   // The ID of the
   private highlightedID: string = '';
 
-  // Inject the UserListService into this component.
+  // Inject the TodoListService into this component.
   constructor(public userListService: UserListService, public dialog: MatDialog) {
 
   }
