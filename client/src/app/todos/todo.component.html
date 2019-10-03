@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<mat-list *ngIf="todo" #todos>
+  <mat-list-item>Owner: {{ todo.owner }}</mat-list-item>
+  <mat-list-item>Status: {{ todo.status }}</mat-list-item>
+  <mat-list-item>Body: {{ todo.body }}</mat-list-item>
+  <mat-list-item>Category: {{ todo.category }}</mat-list-item>
+</mat-list>
