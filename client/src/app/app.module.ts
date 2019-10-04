@@ -7,14 +7,15 @@ import {HomeComponent} from './home/home.component';
 import {UserComponent} from './users/user.component';
 import {UserListComponent} from './users/user-list.component';
 import {UserListService} from './users/user-list.service';
-import {TodoComponent} from "./todos/todo.component";
-import {TodoListService} from "./todos/todo-list.service";
-import {TodoListComponent} from "./todos/todo-list.component";
+import {TodoComponent} from './todos/todo.component';
+import {TodoListService} from './todos/todo-list.service';
+import {TodoListComponent} from './todos/todo-list.component';
 import {Routing} from './app.routes';
 import {APP_BASE_HREF} from '@angular/common';
 
 import {CustomModule} from './custom.module';
 import {AddUserComponent} from './users/add-user.component';
+import {AddTodoComponent} from './todos/add-todo.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import {AddUserComponent} from './users/add-user.component';
     UserListComponent,
     UserComponent,
     AddUserComponent,
+    AddTodoComponent,
     TodoListComponent,
     TodoComponent
   ],
@@ -40,6 +42,7 @@ import {AddUserComponent} from './users/add-user.component';
   ],
   entryComponents: [
     AddUserComponent,
+    AddTodoComponent
   ],
   bootstrap: [AppComponent]
 })
