@@ -34,13 +34,13 @@
             (input)="updateBody($event.target.value)">
 <!--          <input matInput id="todoBody" #input type="search" placeholder="Search for body"-->
 <!--                 [(ngModel)]="todoBody"/>-->
-<!--          <button mat-button id="bodyClearSearch" type="button" *ngIf="todoBody" matSuffix mat-icon-button-->
-<!--                  aria-label="clear" (click)="todoBody='';loadService()">-->
-<!--            <mat-icon>close</mat-icon>-->
-<!--          </button>-->
+          <button mat-button id="bodyClearSearch" type="button" *ngIf="todoBody" matSuffix mat-icon-button
+                  aria-label="clear" (click)="todoBody='';loadService()">
+            <mat-icon>close</mat-icon>
+          </button>
         </mat-form-field>
-<!--        <button mat-raised-button id="submit" color="primary" #input type="button" (click)="loadService()">Submit-->
-<!--        </button>-->
+        <button mat-raised-button id="submit" color="primary" #input type="button" (click)="loadService()">Submit
+        </button>
 
         <mat-accordion *ngIf="todos; else todosError">
           <mat-expansion-panel #elem class="todos" [id]="todo.category" [expanded]="this.isHighlighted(todo)"

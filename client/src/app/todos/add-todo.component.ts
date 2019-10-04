@@ -37,9 +37,11 @@ export class AddTodoComponent implements OnInit {
     ],
 
     'category': [
-      {type: 'pattern', message: 'Category must be: homework, groceries, video games, or software design'},
-      {type: 'required', message: 'Category is required'}
-    ]
+      {type: 'required', message: 'Category is required'},
+      {type: 'minlength', message: 'Category must be at least 2 characters long'},
+      {type: 'maxlength', message: 'Category cannot be more than 25 characters long'},
+      {type: 'pattern', message: 'Category must contain only numbers and letters'}
+    ],
   };
 
   createForms() {
@@ -63,9 +65,11 @@ export class AddTodoComponent implements OnInit {
       // We don't care much about what is in the body field, but there should be something
       body: new FormControl('body', Validators.required),
 
-      // We don't need a special validator just for our app here, but there is a default one for email.
+      // Can be many to-do categories, so just making sure that it follows a good format, similar to owners
       category: new FormControl('email', Validators.compose( [
-        Validators.pattern('homework' || 'software design' || 'groceries' || 'video games'),
+        Validators.minLength(2),
+        Validators.maxLength(25),
+        Validators.pattern('^[A-Za-z0-9\\s]+[A-Za-z0-9\\s]+$(\\.0-9+)?'),
         Validators.required
       ]))
     });

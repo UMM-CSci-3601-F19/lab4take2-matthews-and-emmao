@@ -21,22 +21,14 @@ is potentially helpful and contributed to the shaping of this example -->
           <option value="true">Complete</option>
           <option value="false">Incomplete</option>
         </select>
-<!--        <input matInput #input id="statusField" placeholder="Status" [(ngModel)]="data.todo.status"-->
-<!--               formControlName="status">-->
-<!--        <mat-error *ngFor="let validation of add_todo_validation_messages.status">-->
-<!--          <mat-error class="error-message" id="status-error"-->
-<!--                     *ngIf="addTodoForm.get('status').hasError(validation.type) && (addTodoForm.get('status').dirty || addTodoForm.get('status').touched)">-->
-<!--            {{validation.message}}-->
-<!--          </mat-error>-->
-<!--        </mat-error>-->
       </mat-form-field>
       <mat-form-field flex>
         <input matInput #input id="bodyField" placeholder="Body" [(ngModel)]="data.todo.body"
-               formControlName="body">
+               formControlName="body" required>
       </mat-form-field>
       <mat-form-field flex>
         <input matInput #input id="categoryField" placeholder="Category" [(ngModel)]="data.todo.category"
-               formControlName="category">
+               formControlName="category" required>
         <mat-error *ngFor="let validation of add_todo_validation_messages.category">
           <mat-error class="error-message" id='category-error'
                      *ngIf="addTodoForm.get('category').hasError(validation.type) && (addTodoForm.get('category').dirty || addTodoForm.get('category').touched)">
