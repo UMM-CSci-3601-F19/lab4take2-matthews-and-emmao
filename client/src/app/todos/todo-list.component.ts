@@ -65,7 +65,7 @@ export class TodoListComponent implements OnInit {
   }
 
   public updateStatus(newStatus: string): void {
-    this.todoStatus = (newStatus === 'true');
+    this.todoStatus = (newStatus === 'complete');
     this.updateFilter();
   }
 
