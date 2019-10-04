@@ -64,8 +64,8 @@ export class TodoListComponent implements OnInit {
     this.updateFilter();
   }
 
-  public updateStatus(newStatus: boolean): void {
-    this.todoStatus = newStatus;
+  public updateStatus(newStatus: string): void {
+    this.todoStatus = (newStatus === 'true');
     this.updateFilter();
   }
 
@@ -114,7 +114,7 @@ export class TodoListComponent implements OnInit {
   }
 
   loadService(): void {
-    this.todoListService.getTodos(this.todoBody).subscribe(
+    this.todoListService.getTodos(this.todoOwner).subscribe(
       todos => {
         this.todos = todos;
         this.filteredTodos = this.todos;
