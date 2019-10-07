@@ -38,7 +38,8 @@ import {AddTodoComponent} from './todos/add-todo.component';
   providers: [
     UserListService,
     {provide: APP_BASE_HREF, useValue: '/'},
-    TodoListService
+    TodoListService,
+    {provide: APP_BASE_HREF, useValue: '/'},
   ],
   entryComponents: [
     AddUserComponent,
