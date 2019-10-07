@@ -26,14 +26,14 @@
             (input)="updateStatus($event.target.value)">
         </mat-form-field>
         <mat-form-field>
-          <input
+<!--        <input
             matInput
             id="todoBody" #input
             type="text"
             placeholder="Filter by body"
-            (input)="updateBody($event.target.value)">
-<!--          <input matInput id="todoBody" #input type="search" placeholder="Search for body"-->
-<!--                 [(ngModel)]="todoBody"/>-->
+            (input)="updateBody($event.target.value)"> -->
+         <input matInput id="todoBody" #input type="search" placeholder="Search for body"
+                [(ngModel)]="todoBody"/>
           <button mat-button id="bodyClearSearch" type="button" *ngIf="todoBody" matSuffix mat-icon-button
                   aria-label="clear" (click)="todoBody='';loadService()">
             <mat-icon>close</mat-icon>

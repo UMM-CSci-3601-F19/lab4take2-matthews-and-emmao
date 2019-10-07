@@ -87,7 +87,7 @@ export class UserListService {
     return this.userUrl.indexOf(searchParam) !== -1;
   }
 
-  //remove the parameter and, if present, the &
+  // remove the parameter and, if present, the &
   private removeParameter(searchParam: string) {
     let start = this.userUrl.indexOf(searchParam);
     let end = 0;

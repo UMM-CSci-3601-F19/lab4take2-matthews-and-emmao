@@ -40,21 +40,21 @@ export class TodoListService {
     // Filter by status
     if (searchStatus != null) {
       filteredTodos = filteredTodos.filter(todo => {
-        return !searchStatus || todo.status === searchStatus;
+        return todo.status == searchStatus;
       });
     }
 
     // Filter by body
     if (searchBody != null) {
       filteredTodos = filteredTodos.filter(todo => {
-        return !searchBody || todo.body === searchBody;
+        return !searchBody || todo.body == searchBody;
       });
     }
 
     // Filter by category
     if (searchCategory != null) {
       filteredTodos = filteredTodos.filter(todo => {
-        return !searchCategory || todo.category === searchCategory;
+        return !searchCategory || todo.category == searchCategory;
       });
     }
 

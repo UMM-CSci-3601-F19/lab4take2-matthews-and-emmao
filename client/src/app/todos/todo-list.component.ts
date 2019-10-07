@@ -42,6 +42,7 @@ export class TodoListComponent implements OnInit {
       data: {todo: newTodo}
     });
 
+    // tslint:disable-next-line:no-shadowed-variable
     dialogRef.afterClosed().subscribe(newTodo => {
       if (newTodo != null) {
         this.todoListService.addNewTodo(newTodo).subscribe(
