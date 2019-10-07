@@ -40,7 +40,7 @@ export class TodoListService {
     // Filter by status
     if (searchStatus != null) {
       filteredTodos = filteredTodos.filter(todo => {
-        return todo.status == searchStatus;
+        return todo.status === searchStatus;
       });
     }
 
