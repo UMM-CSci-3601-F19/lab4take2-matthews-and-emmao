@@ -47,7 +47,7 @@ export class TodoListService {
     // Filter by body
     if (searchBody != null) {
       filteredTodos = filteredTodos.filter(todo => {
-        return !searchBody || todo.body == searchBody;
+        return !searchBody || todo.body.toLowerCase().indexOf(searchBody) !== -1;
       });
     }
 
