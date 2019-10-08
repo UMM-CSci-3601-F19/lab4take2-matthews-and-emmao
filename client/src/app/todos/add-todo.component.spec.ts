@@ -6,7 +6,6 @@ import {AddTodoComponent} from './add-todo.component';
 import {CustomModule} from '../custom.module';
 import {By} from '@angular/platform-browser';
 import {NgForm} from '@angular/forms';
-import {AddUserComponent} from '../users/add-user.component';
 
 describe('Add todo component', () => {
 
@@ -22,7 +21,7 @@ describe('Add todo component', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [CustomModule],
-      declarations: [AddUserComponent],
+      declarations: [AddTodoComponent],
       providers: [
         {provide: MatDialogRef, useValue: mockMatDialogRef},
         {provide: MAT_DIALOG_DATA, useValue: null}]

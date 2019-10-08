@@ -65,7 +65,7 @@ public class TodoRequestHandler {
 
   /**
    * Method called from Server when the 'api/todos/new' endpoint is received.
-   * Gets specified to-do info from request and calls addNewTodo helpeemailr method
+   * Gets specified to-do info from request and calls addNewTodo helper method
    * to append that info to a document
    *
    * @param req the HTTP request

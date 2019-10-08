@@ -27,10 +27,10 @@ export class AddTodoComponent implements OnInit {
 
     // Status doesn't need validation because Angular build validates entry for us (also it's a dropdown menu so options
     // are limited).
-    // 'status': [
-    //   {type: 'pattern', message: 'Status must be "Complete" or "Incomplete"'},
-    //   {type: 'required', message: 'Status is required'}
-    // ],
+    'status': [
+      {type: 'pattern', message: 'Status must be "Complete" or "Incomplete"'},
+      {type: 'required', message: 'Status is required'}
+    ],
 
     'body': [
       {type: 'required', message: 'ToDo body is required'}
@@ -56,11 +56,11 @@ export class AddTodoComponent implements OnInit {
         Validators.required
       ])),
 
-      // // A to-do only has two states, complete or incomplete.
-      // status: new FormControl('status', Validators.compose([
-      //   Validators.pattern('Complete' || 'Incomplete'),
-      //   Validators.required
-      //   ])),
+      // A to-do only has two states, complete or incomplete.
+      status: new FormControl('status', Validators.compose([
+        Validators.pattern('^[A-Za-z0-9\\s]+[A-Za-z0-9\\s]+$(\\.0-9+)?'),
+        Validators.required
+        ])),
 
       // We don't care much about what is in the body field, but there should be something
       body: new FormControl('body', Validators.required),

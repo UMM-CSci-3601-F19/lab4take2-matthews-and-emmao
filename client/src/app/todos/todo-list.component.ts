@@ -24,7 +24,7 @@ export class TodoListComponent implements OnInit {
   public todoCategory: string;
 
   // The ID of the
-  private highlightedID: string = '';
+  private highlightedID = '';
 
   // Inject the TodoListService into this component.
   constructor(public todoListService: TodoListService, public dialog: MatDialog) {
@@ -42,7 +42,7 @@ export class TodoListComponent implements OnInit {
       data: {todo: newTodo}
     });
 
-    // tslint:disable-next-line:no-shadowed-variable
+
     dialogRef.afterClosed().subscribe(newTodo => {
       if (newTodo != null) {
         this.todoListService.addNewTodo(newTodo).subscribe(
@@ -66,10 +66,10 @@ export class TodoListComponent implements OnInit {
   }
 
   public updateStatus(newStatus: string): void {
-    if (newStatus == 'complete' || newStatus == 'true') {
+    if (newStatus === 'complete' || newStatus === 'true') {
       this.todoStatus = true;
     } else {
-        if (newStatus == 'incomplete' || newStatus == 'false') {
+        if (newStatus === 'incomplete' || newStatus === 'false') {
           this.todoStatus = false;
         } else {
           this.todoStatus = null;

@@ -66,7 +66,7 @@ export class AddUserComponent implements OnInit {
 
       // We don't need a special validator just for our app here, but there is a default one for email.
       email: new FormControl('email', Validators.email)
-    })
+    });
 
   }
 

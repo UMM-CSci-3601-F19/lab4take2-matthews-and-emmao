@@ -54,7 +54,7 @@ export class TodoListService {
     // Filter by category
     if (searchCategory != null) {
       filteredTodos = filteredTodos.filter(todo => {
-        return !searchCategory || todo.category == searchCategory;
+        return !searchCategory || todo.category.toLowerCase().indexOf(searchCategory) !== -1;
       });
     }
 
