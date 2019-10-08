@@ -45,6 +45,16 @@ export class TodoListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(newTodo => {
       if (newTodo != null) {
+        console.log(newTodo.owner + newTodo.status + newTodo.body + newTodo.category);
+        if (newTodo.status == "true") {
+          newTodo.status = true;
+        } else {
+          if (newTodo.status == "false") {
+            newTodo.status = false;
+          } else {
+            newTodo.status = null;
+          }
+        }
         this.todoListService.addNewTodo(newTodo).subscribe(
           result => {
             this.highlightedID = result;

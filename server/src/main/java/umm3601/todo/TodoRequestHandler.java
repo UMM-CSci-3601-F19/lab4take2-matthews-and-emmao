@@ -78,7 +78,7 @@ public class TodoRequestHandler {
     Document newTodo = Document.parse(req.body());
 
     String owner = newTodo.getString("owner");
-    boolean status = newTodo.getBoolean("status");
+    Boolean status = newTodo.getBoolean("status");
     String body = newTodo.getString("body");
     String category = newTodo.getString("category");
 

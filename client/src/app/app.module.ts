@@ -16,7 +16,8 @@ import {APP_BASE_HREF} from '@angular/common';
 import {CustomModule} from './custom.module';
 import {AddUserComponent} from './users/add-user.component';
 import {AddTodoComponent} from './todos/add-todo.component';
-
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   imports: [
@@ -24,6 +25,8 @@ import {AddTodoComponent} from './todos/add-todo.component';
     HttpClientModule,
     Routing,
     CustomModule,
+    MatOptionModule,
+    MatSelectModule,
   ],
   declarations: [
     AppComponent,

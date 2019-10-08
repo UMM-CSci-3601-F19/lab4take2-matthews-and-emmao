@@ -16,19 +16,20 @@ is potentially helpful and contributed to the shaping of this example -->
         </mat-error>
       </mat-form-field>
       <mat-form-field flex>
-        <!-- <mat-label>TODO Status</mat-label>
-         <select matNativeControl required>
-           <option value="complete">Complete</option>
-           <option value="incomplete">Incomplete</option>
-        </select> -->
-        <input matInput #input id="statusField" placeholder="Status" [(ngModel)]="data.todo.status"
-               formControlName="status">
-        <mat-error *ngFor="let validation of add_todo_validation_messages.status">
-          <mat-error class="error-message" id="status-error"
-                     *ngIf="addTodoForm.get('status').hasError(validation.type) && (addTodoForm.get('status').dirty || addTodoForm.get('status').touched)">
-            {{validation.message}}
-            </mat-error>
-        </mat-error>
+        <mat-label>TODO Status</mat-label>
+<!--        <input matInput #input id="statusField" placeholder="Status" [(ngModel)]="data.todo.status"-->
+<!--               formControlName="status" required>-->
+<!--        <mat-error *ngFor="let validation of add_todo_validation_messages.status">-->
+<!--          <mat-error class="error-message" id="status-error"-->
+<!--                     *ngIf="addTodoForm.get('status').hasError(validation.type) && (addTodoForm.get('status').dirty || addTodoForm.get('status').touched)">-->
+<!--            {{validation.message}}-->
+<!--            </mat-error>-->
+<!--        </mat-error>-->
+        <mat-select #input id="statusField" placeholder="Status" [(ngModel)]="data.todo.status" formControlName="status" required>
+          <mat-option>None</mat-option>
+          <mat-option value="true">Complete</mat-option>
+          <mat-option value="false">Incomplete</mat-option>
+        </mat-select>
       </mat-form-field>
       <mat-form-field flex>
         <input matInput #input id="bodyField" placeholder="Body" [(ngModel)]="data.todo.body"
