@@ -19,7 +19,7 @@ browser.driver.controlFlow().execute = function () {
         return protractor.promise.delayed(100);
     });
 
-    return origFn.apply(browser.driver.controlFlow(), args);
+
 };
 
 
@@ -181,7 +181,7 @@ describe('User list', () => {
         page.field('ageField').clear();
         page.field('ageField').sendKeys('2');
         expect(page.button('confirmAddUserButton').isEnabled()).toBe(false);
-        //clicking somewhere else will make the error appear
+        // clicking somewhere else will make the error appear
         page.field('nameField').click();
         expect(page.getTextFromField('age-error')).toBe('Age must be at least 15');
       });
